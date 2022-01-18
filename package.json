@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "data-inputjs": "^1.0.21",
     "prompt-sync": "^4.2.0"
   }
 }
