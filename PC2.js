@@ -1,5 +1,3 @@
-const { argv0 } = require('process');
-
 data = require('fs').readFileSync('PC2input.txt', 'utf8').split('\n');
 
 //part 1
@@ -26,9 +24,9 @@ console.log('part 1: ', x, ' ', y);
 
 //part Part2
 
-x = 0
-y = 0
-let slope = 0
+x = 0;
+y = 0;
+let slope = 0;
 
 for (let movement of data) {
   // console.log(movement[movement.length]);
@@ -42,10 +40,10 @@ for (let movement of data) {
       break;
     case 'f':
       x += dist;
-      y += dist * slope
+      y += dist * slope;
       break;
   }
 }
 
-console.log('part 2: ', x, ' ', y)
-
+console.log('part 2: ', x, ' ', y);
+//didn't trim the trailing newline from the data so both switchs miss at the end but it's fine :)
