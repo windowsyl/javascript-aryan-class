@@ -15,17 +15,21 @@ console.log(
   parseInt(gamma.join(''), 2) * parseInt(epsilon.join(''), 2)
 );
 
-let primes = new Set()
-
-function getPrime(knownPrimes) {
-  let x = 1;
-  for (let p of knownPrimes) {
-    x *= p;
+let primes = [2];
+let i = 2;
+while (primes.length < 10001) {
+  i++;
+  let cont = false;
+  for (let p of primes) {
+    if (i % p == 0) {
+      cont = true;
+      break;
+    }
   }
-  x += 1;
-  
-  for (let i = 2; i < x/2; i++) {
-    if (x%i == 0) { knownPrimes.add(i)}
+  if (cont) {
+    continue;
   }
+  primes.push(i);
 }
-console.log(getPrime(primes))
+// console.log(primes[1000])
+console.log(primes.pop());
