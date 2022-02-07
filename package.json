@@ -1,6 +1,8 @@
 {
   "dependencies": {
+    "axios": "^0.25.0",
     "data-inputjs": "^1.0.21",
+    "enquirer": "^2.3.6",
     "prompt-sync": "^4.2.0"
   }
 }
